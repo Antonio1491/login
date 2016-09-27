@@ -8,9 +8,8 @@ $contrasena=$_POST["contrasena"];
 $resultado = login($usuario, $contrasena);
 if($resultado == $usuario)
 {
-  $_session['usuario']= $resultado;
-  header("location: inicio.php");
-  EXIT;
+$_SESSION['user']= $resultado;
+header('Location: inicio.php');
   //echo "Hola ". $resultado;
 }
 else{
